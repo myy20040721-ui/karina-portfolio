@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- Unity 构建的嵌入外壳；资源文件仍使用原始构建输出。 -->
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>再续前缘 · 可玩原型</title>
+<style>
+/* 画布随父窗口调整尺寸，全屏时也无需固定像素大小。 */
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#17252c;color:#f8fcf7;font:14px Arial,sans-serif}canvas{display:block;width:100%;height:100%;outline:none}#loading{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:16px;background:#17252c}progress{width:min(280px,70vw);accent-color:#badf8a}p{margin:0;line-height:1.8}
+</style>
+</head>
+<body>
+<canvas id="game" tabindex="0" aria-label="再续前缘游戏画面"></canvas>
+<p id="pointer-hint" hidden style="position:absolute;top:8px;left:12px;right:12px;background:#17252ce6;padding:8px;font-size:12px;pointer-events:none">当前浏览器未能锁定鼠标，建议使用 Edge / Chrome 完整试玩。</p>
+<div id="loading" role="status"><p id="loading-text">正在加载原型 · 0%</p><progress id="progress" max="1" value="0"></progress></div>
+<script src="Build/endfield.loader.js"></script>
+<script type="module">
+// 用户已点击外层开始按钮；此时才读取引擎和场景资源。
+const canvas = document.querySelector('#game');
+// 内置浏览器实际出现了鼠标锁定拒绝；处理这一已知失败，避免中断 Unity 主循环。
+const lockPointer = canvas.requestPointerLock.bind(canvas);
+canvas.requestPointerLock = () => lockPointer().catch(() => {
+  const hint = document.querySelector('#pointer-hint');
+  hint.hidden = false;
+});
+const loading = document.querySelector('#loading');
+const label = document.querySelector('#loading-text');
+// Pages 不提供自定义压缩响应头，因此在启动前显式解压场景数据。
+// 两段并行下载，合并后仍为原始 gzip 字节，游戏数据不会改变。
+const dataParts = await Promise.all(['Build/endfield.data.gz.part1', 'Build/endfield.data.gz.part2'].map(async url => (await fetch(url)).blob()));
+const compressedData = new Blob(dataParts);
+const decompressedData = compressedData.stream().pipeThrough(new DecompressionStream('gzip'));
+const sceneDataUrl = URL.createObjectURL(await new Response(decompressedData).blob());
+createUnityInstance(canvas, {
+  dataUrl:sceneDataUrl,frameworkUrl:'Build/endfield.framework.js',codeUrl:'Build/endfield.wasm',
+  streamingAssetsUrl:'StreamingAssets',companyName:'Karina',productName:'再续前缘',productVersion:'0.1.0',
+  // 限制高像素密度屏幕的渲染倍率，避免嵌入窗口占用过多显存。
+  devicePixelRatio:Math.min(window.devicePixelRatio,1.5)
+}, progress => {
+  document.querySelector('#progress').value = progress;
+  label.textContent = `正在加载原型 · ${Math.round(progress*100)}%`;
+}).then(instance => {
+  URL.revokeObjectURL(sceneDataUrl);
+  loading.remove();
+  canvas.focus();
+}, message => {
+  // 加载失败属于必要反馈，直接显示原因，不让访客停在空白窗口。
+  label.textContent = `原型加载失败：${message}`;
+});
+</script>
+</body>
+</html>

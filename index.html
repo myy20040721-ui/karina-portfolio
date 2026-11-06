@@ -1,0 +1,64 @@
+<!doctype html>
+<!-- 页面只提供内容容器；项目资料由 content.js 统一维护。 -->
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="毛预的游戏策划作品集：机制与关卡设计、叙事设计、Unity 原型开发。">
+  <title>毛预 MAO YU — 游戏策划作品集</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js?v=slides-2" defer></script>
+  <script src="app.js?v=slides-2" defer></script>
+</head>
+<body>
+  <!-- 跳转入口让键盘用户绕过重复导航。 -->
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="rail">
+    <a class="brand" href="#home" aria-label="毛预，返回首页">KR<span>毛预</span></a>
+    <nav aria-label="主导航">
+      <a href="#home"><span>00</span>首页</a>
+      <a href="#work"><span>01</span>作品</a>
+      <a href="#about"><span>02</span>关于</a>
+      <a href="#contact"><span>03</span>联系</a>
+    </nav>
+    <span class="rail-bottom">GAME DESIGN PORTFOLIO / 2026</span>
+  </header>
+  <main id="main">
+    <section id="home" class="hero">
+      <!-- 海报由可访问的真实文字和原创 SVG 组成，装饰不重复朗读。 -->
+      <div class="poster-dots" aria-hidden="true"></div>
+      <div class="topline"><span>MAO YU / KARINA / GAME DESIGN</span><span>PERSONAL PORTFOLIO — 2026</span></div>
+      <div class="poster-stage">
+        <!-- 原创蓝色拼贴：用网格、轨道和裁切色块呼应印刷海报，不遮挡正文。 -->
+        <div class="blue-cutouts" aria-hidden="true"><div class="blue-print"><span>PLAY / 001</span><svg viewBox="0 0 160 220"><path d="M16 18h128v184H16zM16 18l128 184M144 18 16 202"/><circle cx="80" cy="110" r="53"/><ellipse cx="80" cy="110" rx="67" ry="19" transform="rotate(-30 80 110)"/></svg><small>IMAGINE → BUILD</small></div><div class="blue-strip"><span>FIELD NOTES</span><i></i><i></i><i></i></div><div class="blue-registration"><span>＋</span> EXP. 026</div></div>
+        <p class="poster-kicker" data-enter>Designing<br>for play.</p>
+        <p class="poster-invite" data-enter>COME IN.<br>GET CURIOUS.<br>MAKE SOMETHING.</p>
+        <a class="poster-star star-one" href="#work" aria-label="探索作品"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 2 59 33 84 16 68 42 98 50 67 59 84 84 58 68 50 98 41 67 16 84 33 58 2 50 33 41 16 16 42 33Z"/></svg></a>
+        <h1 class="poster-title" aria-label="Make play happen"><span class="word-make" data-enter>Make</span><span class="word-play" data-enter>PLAY<span class="title-spark" aria-hidden="true">✦</span></span><span class="word-happen" data-enter>happen.</span></h1>
+        <span class="poster-echo" aria-hidden="true">PLAY</span>
+        <div class="poster-info" data-enter><strong>毛预 <span>MAO YU</span></strong><p>规则之外，体验之中。<br>机制 / 关卡 / 叙事 / Unity 原型</p></div>
+        <div class="poster-manifesto" data-enter><h2>IDEAS INTO<br>EXPERIENCES.</h2><p>[ 从一个念头，到一次探索。<br>让规则产生可能，让故事成为体验。 ]</p></div>
+        <a class="poster-star star-two" href="#about" aria-label="了解毛预"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 2 59 33 84 16 68 42 98 50 67 59 84 84 58 68 50 98 41 67 16 84 33 58 2 50 33 41 16 16 42 33Z"/></svg></a>
+        <a class="primary-link poster-cta" href="#work" data-enter>探索我的作品 <span>↗</span></a>
+        <span class="poster-edition" aria-hidden="true">01<small>PLAY IS A POSSIBILITY.</small></span>
+      </div>
+      <div class="hero-bottom"><span>关卡设计 <b>＋</b> 机制设计 <b>＋</b> 叙事设计 <b>＋</b> Unity 原型</span><a href="#work">SCROLL TO EXPLORE ↓</a></div>
+    </section>
+    <section id="work" class="section work-section">
+      <div class="section-heading"><div><p class="eyebrow">01 / SELECTED WORKS</p><h2>设计，在游玩中发生。</h2></div><span class="section-note">三个项目 / 不同的体验探索</span></div>
+      <!-- 手写边注和装饰是拼贴画册的一部分，不代表新增项目或实际游戏素材。 -->
+      <div class="scrapbook-intro" aria-hidden="true"><span>Little worlds,<br>different rules.</span><span>游戏是一种<br>关于可能性的练习。 ↘</span><span>WORK IN PLAY.<br>NOTES / 2024—2026</span></div>
+      <div id="projects"></div>
+      <div class="scrapbook-outro" aria-hidden="true"><span>✳</span><p>More questions.<br>More ways to play.</p><small>END OF SELECTED WORKS / KEEP EXPLORING ↘</small></div>
+    </section>
+    <section id="about" class="section about-section">
+      <div class="section-heading"><div><p class="eyebrow">02 / ABOUT ME</p><h2>在理性与想象之间。</h2></div><span class="section-note">DESIGNER / DEVELOPER / ILLUSTRATOR</span></div>
+      <div class="about-grid"><div class="about-intro"><!-- 自拍卡片叠放在原箭头位置；按钮与方向键均可翻页。 -->
+<div class="portrait-album"><button class="portrait-stack" type="button" aria-label="下一张自拍，支持左右方向键和滑动"><img src="assets/about/photo-02.jpg" alt="Karina 的自拍照片 1" loading="lazy" draggable="false"><img src="assets/about/photo-01.jpg" alt="Karina 的自拍照片 2" loading="lazy" draggable="false"><img src="assets/about/photo-03.jpg" alt="Karina 的自拍照片 3" loading="lazy" draggable="false"><img src="assets/about/photo-04.jpg" alt="Karina 的自拍照片 4" loading="lazy" draggable="false"></button><div class="portrait-controls"><button type="button" class="portrait-prev" aria-label="上一张自拍">←</button><span class="portrait-count" aria-live="polite">01 / 04</span><button type="button" class="portrait-next" aria-label="下一张自拍">→</button></div></div><h3>毛预<span>游戏策划 · 独立开发实践者</span></h3><p>从产品设计出发，走向游戏设计。关注交互体验与规则逻辑，也关注故事如何在玩家的行动中展开。</p><p>参与主题研究、机制与关卡设计、叙事文本和 Unity 原型开发，将视觉表达与技术实现连接起来。</p></div><div class="about-details"><h3 class="small-heading">学习轨迹 / EDUCATION</h3><div class="education"><span>2026.09 — 2027.10</span><h4>伦敦大学金史密斯学院</h4><p>MA 游戏设计 · 硕士在读</p></div><div class="education"><span>2022.09 — 2026.06</span><h4>华南理工大学</h4><p>产品设计 · 本科</p></div><h3 class="small-heading skill-heading">工具与实践 / TOOLKIT</h3><div class="skills"><span>Unity</span><span>Figma</span><span>C# 基础</span><span>Python 基础</span><span>Spine</span><span>Blender</span><span>Photoshop</span><span>CSP</span></div></div></div>
+      <div class="illustration-strip"><div><p class="eyebrow">ANOTHER SIDE OF ME</p><h3>也用画笔，构建角色的温度。</h3><p>2025.02 — 2026.07 / 自由职业画师与自媒体创作</p></div><div class="art-stat"><strong>300+</strong><span>绘画稿件 · 全好评</span></div><div class="art-stat"><strong>5 星</strong><span>米画师优选画师</span></div></div>
+    </section>
+    <section id="contact" class="section contact-section"><p class="eyebrow">03 / LET’S CONNECT</p><h2>下一个好玩的想法，<br>从一次交流开始<span class="blue">。</span></h2><a id="email-link" class="email-link"></a><div class="contact-bottom"><span>游戏策划 / 作品交流</span><a href="#home">BACK TO TOP ↑</a></div></section>
+    <footer><span>© 2026 毛预 / MAO YU</span><span>设计想法，让体验发生。</span></footer>
+  </main>
+</body>
+</html>

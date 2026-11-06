@@ -1,0 +1,39 @@
+<!doctype html>
+<!-- 第二个作品暂以原型为主体，不生成不存在的 PPT 或成果说明。 -->
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>All kinds of cats — KARINA / 项目试玩</title>
+  <link rel="stylesheet" href="../styles.css?v=cats-1">
+</head>
+<body class="case-page deck-page cats-page">
+  <a class="skip-link" href="#case-main">跳到项目试玩</a>
+  <header class="case-nav"><a href="../index.html#work">← 返回作品集</a><span>KR / KARINA</span><span>PROJECT 02</span></header>
+  <main id="case-main" class="deck-main" aria-label="All kinds of cats 项目试玩">
+    <!-- 与第一个项目共用播放器组件；点击开始才下载游戏资源。 -->
+    <section class="prototype" aria-labelledby="prototype-title">
+      <div class="prototype-heading"><div><p class="eyebrow">PLAY THE PROTOTYPE / 02</p><h1 id="prototype-title">All kinds of cats</h1></div><button id="prototype-fullscreen" type="button" hidden>全屏试玩 ↗</button></div>
+      <div class="prototype-window" id="prototype-window" data-game-src="../games/cats/index.html" data-game-title="All kinds of cats Unity 可玩原型">
+        <div class="prototype-launch" id="prototype-launch"><img src="../assets/cats/cover.png" alt="All kinds of Cats 蓝色猫形岛屿封面"><button id="prototype-start" type="button">开始试玩 <span>↗</span></button></div>
+        <button id="prototype-stop" class="prototype-stop" type="button" hidden>停止试玩 ×</button>
+      </div>
+      <p class="prototype-controls">电脑键鼠操作 · 具体操作见游戏内提示 · Esc 释放鼠标后，可点击「停止试玩」</p>
+      <p class="prototype-controls"><a href="https://myy09845742.itch.io/cat-light-ball" target="_blank" rel="noopener">itch.io 试玩 ↗</a></p>
+      <p class="prototype-hint" id="prototype-hint" hidden>网页原型需要本地预览服务。<a href="http://127.0.0.1:5174/projects/cats.html#prototype-title">通过本地预览打开 ↗</a></p>
+    </section>
+    <!-- 先展示关卡全景，再以两列排列用户提供的实际局内截图。 -->
+    <section class="cats-gallery" aria-labelledby="gallery-title">
+      <p class="eyebrow">INSIDE THE GAME</p><h2 id="gallery-title">在猫猫的世界里。</h2>
+      <figure class="cats-overview"><a href="../assets/cats/overview.png" target="_blank" rel="noopener"><img src="../assets/cats/overview.png" alt="形形色色猫猫关卡全景与中文标题" loading="lazy"></a><figcaption>关卡全景</figcaption></figure>
+      <div class="cats-screenshots">
+        <figure><a href="../assets/cats/gameplay-01.png" target="_blank" rel="noopener"><img src="../assets/cats/gameplay-01.png" alt="大树攀爬与风筝任务画面" loading="lazy"></a><figcaption>局内截图 / 01</figcaption></figure>
+        <figure><a href="../assets/cats/gameplay-02.png" target="_blank" rel="noopener"><img src="../assets/cats/gameplay-02.png" alt="树根、藤蔓与法阵交互画面" loading="lazy"></a><figcaption>局内截图 / 02</figcaption></figure>
+        <figure><a href="../assets/cats/gameplay-03.png" target="_blank" rel="noopener"><img src="../assets/cats/gameplay-03.png" alt="花田中的角色对话与任务画面" loading="lazy"></a><figcaption>局内截图 / 03</figcaption></figure>
+        <figure><a href="../assets/cats/gameplay-04.png" target="_blank" rel="noopener"><img src="../assets/cats/gameplay-04.png" alt="夜色中攀爬藤蔓的画面" loading="lazy"></a><figcaption>局内截图 / 04</figcaption></figure>
+      </div>
+    </section>
+  </main>
+  <footer class="deck-footer"><a href="../index.html#work">返回全部作品 ↗</a></footer>
+  <script src="prototype.js?v=cats-1"></script>
+</body>
+</html>

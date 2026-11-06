@@ -1,0 +1,49 @@
+<!doctype html>
+<!-- 项目原稿完整展示，不额外拆分或重写用户的演示内容。 -->
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>再续前缘 — KARINA / 项目原稿</title>
+  <link rel="stylesheet" href="../styles.css?v=video-1">
+</head>
+<body class="case-page deck-page">
+  <a class="skip-link" href="#case-main">跳到项目原稿</a>
+  <header class="case-nav"><a href="../index.html#work">← 返回作品集</a><a class="case-media-jump" href="#video-title">滑到底部观看视频/试玩关卡白盒 ↓</a><span>KR / KARINA</span><span>PROJECT 01</span></header>
+  <main id="case-main" class="deck-main" aria-label="再续前缘完整项目演示">
+    <!-- 按 PDF 原顺序排列，延迟加载后续页以保持滚动流畅。 -->
+      <a href="../assets/endfield/ppt-v3/slide-01.webp" target="_blank" rel="noopener"><img src="../assets/endfield/ppt-v3/slide-01.webp" alt="再续前缘项目原稿，第 1 页，共 11 页" width="2304" height="1296" loading="eager"></a>
+      <a href="../assets/endfield/ppt-v3/slide-02.webp" target="_blank" rel="noopener"><img src="../assets/endfield/ppt-v3/slide-02.webp" alt="再续前缘项目原稿，第 2 页，共 11 页" width="2304" height="1296" loading="lazy"></a>
+      <a href="../assets/endfield/ppt-v3/slide-03.webp" target="_blank" rel="noopener"><img src="../assets/endfield/ppt-v3/slide-03.webp" alt="再续前缘项目原稿，第 3 页，共 11 页" width="2304" height="1296" loading="lazy"></a>
+      <a href="../assets/endfield/ppt-v3/slide-04.webp" target="_blank" rel="noopener"><img src="../assets/endfield/ppt-v3/slide-04.webp" alt="再续前缘项目原稿，第 4 页，共 11 页" width="2304" height="1296" loading="lazy"></a>
+      <a href="../assets/endfield/ppt-v3/slide-05.webp" target="_blank" rel="noopener"><img src="../assets/endfield/ppt-v3/slide-05.webp" alt="再续前缘项目原稿，第 5 页，共 11 页" width="2304" height="1296" loading="lazy"></a>
+      <a href="../assets/endfield/ppt-v3/slide-06.webp" target="_blank" rel="noopener"><img src="../assets/endfield/ppt-v3/slide-06.webp" alt="再续前缘项目原稿，第 6 页，共 11 页" width="2304" height="1296" loading="lazy"></a>
+      <a href="../assets/endfield/ppt-v3/slide-07.webp" target="_blank" rel="noopener"><img src="../assets/endfield/ppt-v3/slide-07.webp" alt="再续前缘项目原稿，第 7 页，共 11 页" width="2304" height="1296" loading="lazy"></a>
+      <a href="../assets/endfield/ppt-v3/slide-08.webp" target="_blank" rel="noopener"><img src="../assets/endfield/ppt-v3/slide-08.webp" alt="再续前缘项目原稿，第 8 页，共 11 页" width="2304" height="1296" loading="lazy"></a>
+      <a href="../assets/endfield/ppt-v3/slide-09.webp" target="_blank" rel="noopener"><img src="../assets/endfield/ppt-v3/slide-09.webp" alt="再续前缘项目原稿，第 9 页，共 11 页" width="2304" height="1296" loading="lazy"></a>
+      <a href="../assets/endfield/ppt-v3/slide-10.webp" target="_blank" rel="noopener"><img src="../assets/endfield/ppt-v3/slide-10.webp" alt="再续前缘项目原稿，第 10 页，共 11 页" width="2304" height="1296" loading="lazy"></a>
+      <a href="../assets/endfield/ppt-v3/slide-11.webp" target="_blank" rel="noopener"><img src="../assets/endfield/ppt-v3/slide-11.webp" alt="再续前缘项目原稿，第 11 页，共 11 页" width="2304" height="1296" loading="lazy"></a>
+    <!-- 原视频无损封装为网页播放文件；不预加载，避免浏览 PPT 时下载大视频。 -->
+    <section class="project-video" aria-labelledby="video-title">
+      <div class="prototype-heading"><div><p class="eyebrow">PROJECT WALKTHROUGH</p><h2 id="video-title">项目介绍视频</h2></div><span class="video-duration">10 分 50 秒</span></div>
+      <video controls playsinline preload="none" poster="../assets/endfield/ppt-v3/slide-01.webp" aria-label="再续前缘叙事与关卡再设计介绍视频">
+        <source src="../assets/endfield/introduction.mp4" type="video/mp4">
+        <a href="../assets/endfield/introduction.mp4">打开介绍视频</a>
+      </video>
+    </section>
+    <!-- 原型只在用户点击后加载，避免浏览演示稿时自动占用显存和声音。 -->
+    <section class="prototype" aria-labelledby="prototype-title">
+      <div class="prototype-heading"><div><p class="eyebrow">PLAY THE PROTOTYPE</p><h1 id="prototype-title">走进「再续前缘」</h1></div><button id="prototype-fullscreen" type="button" hidden>全屏试玩 ↗</button></div>
+      <div class="prototype-window" id="prototype-window" data-game-src="../games/endfield/index.html" data-game-title="再续前缘 Unity 可玩原型">
+        <div class="prototype-launch" id="prototype-launch"><img src="../assets/endfield/cover-scene.png" alt="再续前缘关卡白盒全景"><button id="prototype-start" type="button">开始试玩 <span>↗</span></button></div>
+        <!-- 按钮放在游戏容器内，全屏时也可以停止试玩。 -->
+        <button id="prototype-stop" class="prototype-stop" type="button" hidden>停止试玩 ×</button>
+      </div>
+      <p class="prototype-controls">全流程大约15分钟 · 电脑键鼠操作 · WASD 移动 / 鼠标转向 / 空格跳跃 / Shift 奔跑 / F 交互 · Esc 释放鼠标后，可点击「停止试玩」</p>
+      <p class="prototype-hint" id="prototype-hint" hidden>网页原型需要本地预览服务。<a href="http://127.0.0.1:5174/projects/endfield.html#prototype-title">通过本地预览打开 ↗</a></p>
+    </section>
+  </main>
+  <footer class="deck-footer"><a href="../index.html#work">返回全部作品 ↗</a></footer>
+  <script src="prototype.js"></script>
+</body>
+</html>
